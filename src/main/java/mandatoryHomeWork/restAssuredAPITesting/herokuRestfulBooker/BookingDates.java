@@ -1,36 +1,39 @@
 package mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker;
 
-import java.time.LocalDate;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.*;
-import java.util.Date;
 
 public class BookingDates {
+
+	private String checkin;
+	private String checkout;
 	
-	private LocalDate checkin;
-	private LocalDate checkout;
-	public BookingDates(LocalDate checkin, LocalDate checkout)
+	public BookingDates()
+	{
+		
+	}
+	
+	public BookingDates(String checkin, String checkout)
 	{
 		this.checkin=checkin;
 		this.checkout=checkout;
 	}
 	
-	public LocalDate getCheckin()
+	public String getCheckin()
 	{
 		return this.checkin;
 	}
 	
-	public LocalDate getCheckout()
+	public String getCheckout()
 	{
 		return this.checkout;
 	}
 	
-	public void setCheckin(LocalDate checkin)
+	public void setCheckin(String checkin)
 	{
 		this.checkin=checkin;
 	}
 	
-	public void setCheckout(LocalDate checkout)
+	public void setCheckout(String checkout)
 	{
 		this.checkout=checkout;
 	}

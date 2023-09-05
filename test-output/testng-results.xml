@@ -1,59 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-29T20:22:49 IST" name="Default suite" finished-at="2023-08-29T20:23:12 IST" duration-ms="23124">
+  <suite started-at="2023-09-05T19:09:04 IST" name="Default suite" finished-at="2023-09-05T19:09:28 IST" duration-ms="24276">
     <groups>
     </groups>
-    <test started-at="2023-08-29T20:22:49 IST" name="Default test" finished-at="2023-08-29T20:23:12 IST" duration-ms="23124">
-      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBooking1">
-        <test-method signature="getBooking1()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBooking1@222545dc]" started-at="2023-08-29T20:23:09 IST" name="getBooking1" finished-at="2023-08-29T20:23:12 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.DeleteBooking.deleteBooking" duration-ms="2499" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBooking1 -->
-      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBooking1 -->
-      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.CreateBooking">
-        <test-method signature="createBooking()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.CreateBooking@5c5eefef]" started-at="2023-08-29T20:22:57 IST" name="createBooking" finished-at="2023-08-29T20:22:59 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.CreateToken.createToken" duration-ms="2064" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createBooking -->
-      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.CreateBooking -->
-      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBooking">
-        <test-method signature="getBooking()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBooking@7ec7ffd3]" started-at="2023-08-29T20:23:02 IST" name="getBooking" finished-at="2023-08-29T20:23:04 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBookingIDs.getBookingIDs" duration-ms="2351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBooking -->
-      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBooking -->
-      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HealthCheck">
-        <test-method signature="ping()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HealthCheck@6c64cb25]" started-at="2023-08-29T20:22:49 IST" name="ping" finished-at="2023-08-29T20:22:54 IST" duration-ms="5170" status="PASS">
+    <test started-at="2023-09-05T19:09:04 IST" name="Default test" finished-at="2023-09-05T19:09:28 IST" duration-ms="24276">
+      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker">
+        <test-method signature="ping()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker@4a94ee4]" started-at="2023-09-05T19:09:04 IST" name="ping" finished-at="2023-09-05T19:09:10 IST" duration-ms="6074" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ping -->
-      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HealthCheck -->
-      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.CreateToken">
-        <test-method signature="createToken()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.CreateToken@16293aa2]" started-at="2023-08-29T20:22:54 IST" name="createToken" finished-at="2023-08-29T20:22:57 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HealthCheck.ping" duration-ms="2948" status="PASS">
+        <test-method signature="createToken()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker@4a94ee4]" started-at="2023-09-05T19:09:10 IST" name="createToken" finished-at="2023-09-05T19:09:13 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker.ping" duration-ms="2758" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createToken -->
-      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.CreateToken -->
-      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBookingIDs">
-        <test-method signature="getBookingIDs()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBookingIDs@5158b42f]" started-at="2023-08-29T20:22:59 IST" name="getBookingIDs" finished-at="2023-08-29T20:23:02 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.CreateBooking.createBooking" duration-ms="2822" status="PASS">
+        <test-method signature="createBooking()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker@4a94ee4]" started-at="2023-09-05T19:09:13 IST" name="createBooking" finished-at="2023-09-05T19:09:15 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker.createToken" duration-ms="2159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking -->
+        <test-method signature="getBookingIDs()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker@4a94ee4]" started-at="2023-09-05T19:09:15 IST" name="getBookingIDs" finished-at="2023-09-05T19:09:20 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker.createBooking" duration-ms="4897" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBookingIDs -->
-      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBookingIDs -->
-      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.DeleteBooking">
-        <test-method signature="deleteBooking()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.DeleteBooking@6ae5aa72]" started-at="2023-08-29T20:23:07 IST" name="deleteBooking" finished-at="2023-08-29T20:23:09 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.UpdateBooking.updateBooking" duration-ms="2174" status="PASS">
+        <test-method signature="getBooking()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker@4a94ee4]" started-at="2023-09-05T19:09:20 IST" name="getBooking" finished-at="2023-09-05T19:09:22 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker.getBookingIDs" duration-ms="2388" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteBooking -->
-      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.DeleteBooking -->
-      <class name="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.UpdateBooking">
-        <test-method signature="updateBooking()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.UpdateBooking@595b007d]" started-at="2023-08-29T20:23:04 IST" name="updateBooking" finished-at="2023-08-29T20:23:07 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.GetBooking.getBooking" duration-ms="3027" status="PASS">
+        </test-method> <!-- getBooking -->
+        <test-method signature="updateBooking()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker@4a94ee4]" started-at="2023-09-05T19:09:22 IST" name="updateBooking" finished-at="2023-09-05T19:09:25 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker.getBooking" duration-ms="2682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateBooking -->
-      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.UpdateBooking -->
+        <test-method signature="deleteBooking()[pri:0, instance:mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker@4a94ee4]" started-at="2023-09-05T19:09:25 IST" name="deleteBooking" finished-at="2023-09-05T19:09:28 IST" depends-on-methods="mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker.updateBooking" duration-ms="3199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking -->
+      </class> <!-- mandatoryHomeWork.restAssuredAPITesting.herokuRestfulBooker.HerokuBooker -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

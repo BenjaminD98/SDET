@@ -10,12 +10,12 @@ public class Booking {
 	boolean depositpaid;
 	//BookingDates bookingdates;
 	String additionalneeds;
-	BookingDates1 bookingdates;
+	BookingDates bookingdates;
 	
 	public Booking() {
 	}
 	
-	public Booking(String firstname, String lastname, int totalprice, boolean depositpaid, BookingDates1 bookingdates,
+	public Booking(String firstname, String lastname, int totalprice, boolean depositpaid, BookingDates bookingdates,
 			String additionalneeds) {
 		super();
 		this.firstname = firstname;
@@ -68,11 +68,11 @@ public class Booking {
 		this.bookingdates = bookingdates;
 	}*/
 
-	public BookingDates1 getBookingdates() {
+	public BookingDates getBookingdates() {
 		return bookingdates;
 	}
 
-	public void setBookingdates(BookingDates1 bookingdates) {
+	public void setBookingdates(BookingDates bookingdates) {
 		this.bookingdates = bookingdates;
 	}
 
