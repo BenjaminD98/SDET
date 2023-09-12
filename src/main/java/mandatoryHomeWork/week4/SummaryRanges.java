@@ -1,7 +1,10 @@
 package mandatoryHomeWork.week4;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import org.junit.Test;
+import org.junit.Assert;
 
 public class SummaryRanges {
 
@@ -33,17 +36,64 @@ public class SummaryRanges {
 	 * 
 	 */
 	
+	@Test
+	public void test1() {
+		int[] nums={-25,-22,-21,-20,-19,-18,-17,-16,0,1,2,3,4,88,89,90,91};
+		String[] s={"-25","-22->-16","0->4","88->91"};
+		List<String> output=Arrays.asList(s);
+		Assert.assertEquals(output, summaryRanges_lc228(nums));
+	}
+	
+	@Test
+	public void test2() {
+		int[] nums={0,1,2,3,4,5,6,7,8,9,10};
+		String[] s={"0->10"};
+		List<String> output=Arrays.asList(s);
+		Assert.assertEquals(output, summaryRanges_lc228(nums));
+	}
+	
+	@Test
+	public void test3() {
+		int[] nums={0};
+		String[] s={"0"};
+		List<String> output=Arrays.asList(s);
+		Assert.assertEquals(output, summaryRanges_lc228(nums));
+	}
+	
+	@Test
+	public void test4() {
+		int[] nums={-19,-18,-17,-16,-15,-14,-13,-12,-11};
+		String[] s={"-19->-11"};
+		List<String> output=Arrays.asList(s);
+		Assert.assertEquals(output, summaryRanges_lc228(nums));
+	}
+	
+	@Test
+	public void test5() {
+		int[] nums={};
+		String[] s={};
+		List<String> output=Arrays.asList(s);
+		Assert.assertEquals(output, summaryRanges_lc228(nums));
+	}
+	
 	public List<String> summaryRanges_lc228(int[] nums)
 	{
 		List<String> newList= new ArrayList<String>();
 		int min=0,max=0;
 		boolean flag=false;
-		for(int i=0;i<nums.length-1;i++)
+		for(int i=0;i<nums.length;i++)
 		{
 			if(flag==false)
 			{
 				min=nums[i];
 				flag=true;
+			}
+			if(i==nums.length-1)
+			{
+				max=nums[i];
+				if(min==max)newList.add(""+max);
+				else newList.add(min+"->"+max);
+				break;
 			}
 			if((nums[i]+1)==nums[i+1])
 			{
@@ -51,7 +101,7 @@ public class SummaryRanges {
 			}
 			else {
 				max=nums[i];
-				if(min==max)newList.add("max");
+				if(min==max)newList.add(""+max);
 				else newList.add(min+"->"+max);
 				flag=false;
 			}
