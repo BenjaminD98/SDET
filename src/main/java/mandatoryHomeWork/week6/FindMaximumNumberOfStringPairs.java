@@ -1,5 +1,8 @@
 package mandatoryHomeWork.week6;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class FindMaximumNumberOfStringPairs {
 
 	/*
@@ -16,7 +19,7 @@ public class FindMaximumNumberOfStringPairs {
 	 *   	words[i] contains only lowercase English letters.
 	 *   
 	 *   
-	 * 2.{"ab","bc","ca","ac","cb,"ba"} output =3
+	 * 2.{"ab","bc","ca","ac","cb","ba"} output =3
 	 * 	 {"xy"} output=0
 	 *   {"ab,"bc","cd"} output=0
 	 *   
@@ -42,21 +45,46 @@ public class FindMaximumNumberOfStringPairs {
 	 * 11.Code Optimization to be done if needed.
 	 */
 	
+	
+	@Test
+	public void test1()
+	{
+		String[] s={"ab","bc","ca","ac","cb","ba"};
+		Assert.assertEquals(3, maximumNumberOfStringPairs(s));
+	}
+	
+	@Test
+	public void test2()
+	{
+		String[] s={"xy"};
+		Assert.assertEquals(0, maximumNumberOfStringPairs(s));
+	}
+	
+	@Test
+	public void test3()
+	{
+		String[] s={"ab","bc","cd"};
+		Assert.assertEquals(0, maximumNumberOfStringPairs(s));
+	}
+	
+	
 	public int maximumNumberOfStringPairs(String[] words)
 	{
 		int count=0;
 		boolean[] check=new boolean[words.length];
-		for(int i=0;i<words.length;i++)
+		for(int i=0;i<words.length-1;i++)
 		{
 			if(check[i]) continue;
-			for(int j=i;j<words.length;j++)
+			for(int j=i+1;j<words.length;j++)
 			{
 				if(check[j]) continue;
-				if(words[j].equals(words[i].charAt(1)+words[i].charAt(0)))
+				String s=""+words[i].charAt(1)+words[i].charAt(0);
+				if(words[j].equals(s))
 				{
 					check[i]=true;
 					check[j]=true;
 					count++;
+					break;
 				}
 			}
 		}
