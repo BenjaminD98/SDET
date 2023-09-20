@@ -1,5 +1,8 @@
 package mandatoryHomeWork.week7;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -47,31 +50,31 @@ public class SubstringsOfSizeThreeWithDistinctCharacters {
 	@Test
 	public void test1()
 	{
-		Assert.assertEquals(24, countGoodSubstrings("abcdefghijklmnopqrstuvwxyz"));
+		Assert.assertEquals(24, countGoodSubstrings2("abcdefghijklmnopqrstuvwxyz"));
 	}
 	
 	@Test
 	public void test2()
 	{
-		Assert.assertEquals(0, countGoodSubstrings("a"));
+		Assert.assertEquals(0, countGoodSubstrings2("a"));
 	}
 	
 	@Test
 	public void test3()
 	{
-		Assert.assertEquals(0, countGoodSubstrings("aaaaaaa"));
+		Assert.assertEquals(0, countGoodSubstrings2("aaaaaaa"));
 	}
 	
 	@Test
 	public void test4()
 	{
-		Assert.assertEquals(1, countGoodSubstrings("xyz"));
+		Assert.assertEquals(1, countGoodSubstrings2("xyz"));
 	}
 	
 	@Test
 	public void test5()
 	{
-		Assert.assertEquals(0, countGoodSubstrings(""));
+		Assert.assertEquals(0, countGoodSubstrings2(""));
 	}
 	
 	public int countGoodSubstrings(String s)
@@ -85,6 +88,37 @@ public class SubstringsOfSizeThreeWithDistinctCharacters {
 				goodStrings++;
 			}
 			i++;
+		}
+		
+		return goodStrings;
+	}
+	
+	public int countGoodSubstrings2(String s)
+	{
+		if(s.length()<3) return 0;
+		int left=0,right=0,goodStrings=0;
+		HashMap<Character,Integer> goodestString=new HashMap<Character,Integer>();
+		while(right<s.length())
+		{
+			if(right<3)
+			{
+				if(!goodestString.containsKey(s.charAt(right))) goodestString.put(s.charAt(right),1);
+				else goodestString.replace(s.charAt(right), goodestString.get(s.charAt(right))+1);
+				System.out.println(Arrays.asList(goodestString));
+				right++;
+			}
+			else
+			{
+				goodestString.replace(s.charAt(left), goodestString.get(s.charAt(left))-1);
+				if(goodestString.get(s.charAt(left))==0) goodestString.remove(s.charAt(left));
+				left++;
+				if(!goodestString.containsKey(s.charAt(right))) goodestString.put(s.charAt(right),1);
+				else goodestString.replace(s.charAt(right), goodestString.get(s.charAt(right))+1);
+				right++;
+				System.out.println(Arrays.asList(goodestString));
+				
+			}
+			if(goodestString.size()==3) goodStrings++;
 		}
 		
 		return goodStrings;
