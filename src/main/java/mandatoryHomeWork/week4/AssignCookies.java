@@ -1,6 +1,8 @@
 package mandatoryHomeWork.week4;
 
 import java.util.Arrays;
+import java.util.HashSet;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -42,7 +44,7 @@ public class AssignCookies {
 	{
 		int[] g={1,2,3,4,5,6,7};
 		int[] s={1,2,3,4,5};
-		Assert.assertEquals(5, findContentChildren(g,s));
+		Assert.assertEquals(5, findContentChildren2(g,s));
 		
 	}
 	
@@ -51,7 +53,7 @@ public class AssignCookies {
 	{
 		int[] g={1,2,3,4,5};
 		int[] s={1,1,1,1};
-		Assert.assertEquals(1, findContentChildren(g,s));	
+		Assert.assertEquals(1, findContentChildren2(g,s));	
 	}
 	 
 	 @Test
@@ -59,7 +61,7 @@ public class AssignCookies {
 	 {
 		 int[] g={1};
 		 int[] s= {2,2,2,2,2};
-		 Assert.assertEquals(1, findContentChildren(g,s));
+		 Assert.assertEquals(1, findContentChildren2(g,s));
 	 }
 	 
 	 @Test
@@ -67,7 +69,7 @@ public class AssignCookies {
 	 {
 		 int[] g={5,5,5,5,5};
 		 int[] s={1,1};
-		 Assert.assertEquals(0, findContentChildren(g,s));
+		 Assert.assertEquals(0, findContentChildren2(g,s));
 	 }
 	 
 	 @Test
@@ -75,7 +77,7 @@ public class AssignCookies {
 	 {
 		 int[] g={1};
 		 int[] s={};
-		 Assert.assertEquals(0, findContentChildren(g,s));
+		 Assert.assertEquals(0, findContentChildren2(g,s));
 	 }
 	 
 	 public int findContentChildren(int[] g, int[] s) {
@@ -103,5 +105,24 @@ public class AssignCookies {
 		return count;
      }
 	
+	public int findContentChildren2(int[] g, int[] s) {
+   		int count = 0;
+   		if(s.length == 0) return 0;
+   		Arrays.sort(s);
+   		Arrays.sort(g);
+   		int gPointer = g.length-1, sPointer = s.length-1;
+   		while(gPointer >= 0 && sPointer >= 0)
+   		{
+   			if(g[gPointer] <= s[sPointer])
+   			{
+   				count++;
+   				sPointer--;
+   			}
+   			gPointer--;
+   		}
+	
+	
+   		return count;
+	}
 	
 }

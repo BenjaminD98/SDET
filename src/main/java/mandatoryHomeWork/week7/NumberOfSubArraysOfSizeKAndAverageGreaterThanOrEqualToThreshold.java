@@ -47,6 +47,9 @@ public class NumberOfSubArraysOfSizeKAndAverageGreaterThanOrEqualToThreshold {
 	 * 9.Code written below in IDE.
 	 * 10.Testing and debugging in IDE to be done.
 	 * 11.Code Optimization to be done if needed.
+	 * 
+	 * Time Complexity O(n)
+	 * Space Complexity O(1)- 
 	 */
 	
 	@Test
